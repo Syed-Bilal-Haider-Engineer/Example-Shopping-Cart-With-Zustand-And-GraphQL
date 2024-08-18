@@ -3,7 +3,7 @@ import {useQuery, useMutation} from '@apollo/client';
 import {Login} from '../../Mutations/Auth';
 import {QueryItems} from '../../Queries/Items';
 import { useNavigate } from 'react-router-dom';
-
+import styles from './Login.module.css';
 function Home() {
   const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -45,21 +45,26 @@ function Home() {
   };
 
   return (
-    <div>
-      <div>
-        <input
-          type="text"
-          placeholder="Username"
-          onChange={(event) => handleInputChange(event, setUserName)}
-        />
-        <input
-          type="text"
-          placeholder="Password..."
-          onChange={(event) => handleInputChange(event, setPassword)}
-        />
-        <button onClick={createUserAndRefetch}>Login</button>
-      </div>
+    <div className={styles.container}>
+    <div className={styles.formContainer}>
+      <h1 className={styles.heading}>Login</h1>
+      <input
+        type="text"
+        placeholder="Username"
+        className={styles.input}
+        onChange={(event) => handleInputChange(event, setUserName)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        className={styles.input}
+        onChange={(event) => handleInputChange(event, setPassword)}
+      />
+      <button className={styles.button} onClick={createUserAndRefetch}>
+        Login
+      </button>
     </div>
+  </div>
   );
 }
 

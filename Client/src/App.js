@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Component/Auth/Login"
 import './App.css';
 import Header from "./Component/NavBar/Nav";
-import ProductList from "./Zustand/ProductList";
-import Cart from "./Zustand/Cart";
-import Checkout from "./Zustand/Checkout";
+import Cart from "./Zustand/Cart/Cart";
+import Checkout from "./Zustand/Checkout/Checkout";
+import ProductList from "./Zustand/Products/ProductList";
 
 const App = () => {
   return (
