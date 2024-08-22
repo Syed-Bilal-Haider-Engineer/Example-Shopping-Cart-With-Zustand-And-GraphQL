@@ -13,7 +13,7 @@ function Header() {
     <>
           <h1> {isLoggedIn ? 'Cart Management':'Login'}</h1>
         <nav>
-          <ul style={{ display: "flex", listStyleType: "none" }}>
+          <ul style={{ display: "flex", listStyleType: "none", gap:5 }}>
             <li style={{ marginRight: "10px" }}>
               <Link to="/">Login</Link>
             </li>
@@ -25,6 +25,9 @@ function Header() {
             </li>
             <li>
               <Link to="/checkout">Checkout</Link>
+            </li>
+            <li style={{ marginRight: "10px" }}>
+              <Link  to='/allItemDirectory'>Item List</Link>
             </li>
           </ul>
         </nav>

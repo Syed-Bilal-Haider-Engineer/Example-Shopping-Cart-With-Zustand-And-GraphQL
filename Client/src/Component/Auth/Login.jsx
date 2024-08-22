@@ -1,21 +1,13 @@
 import React, {useState} from 'react';
-import {useQuery, useMutation} from '@apollo/client';
-import {Login} from '../../Mutations/Auth';
-import {QueryItems} from '../../Queries/Items';
+import { useMutation} from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
+import { Login } from '../../GraphQL/Mutations/Auth';
 function Home() {
   const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate()
   const [login] = useMutation(Login);
-  const {loading, refetch, error, data} = useQuery(QueryItems, {
-    variables: {pageSize: 10, pageNumber: 1},
-  });
-
-  console.log(error?.message, 'error');
-  console.log(data, 'data');
-
   const handleInputChange = (event, setter) => {
     setter(event.target.value);
   };
