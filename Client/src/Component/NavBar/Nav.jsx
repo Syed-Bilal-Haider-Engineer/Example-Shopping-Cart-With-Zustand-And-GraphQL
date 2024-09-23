@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate =useNavigate()
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     if (token) {
@@ -11,7 +12,6 @@ function Header() {
   }, []);
   return (
     <>
-      <h1> </h1>
       <nav className="navbar" style={{ position: "fixed", top: 0 }}>
         <div className="navbar-container container">
           <input type="checkbox" id="nav-checkbox" />
@@ -37,7 +37,7 @@ function Header() {
               <Link to="/checkout">Checkout</Link>
             </li>
           </ul>
-          <h1 className="logo">Navbar</h1>
+          <h1 className="logo" onClick={()=>navigate("/")} >Home</h1>
         </div>
       </nav>
     

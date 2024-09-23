@@ -63,8 +63,8 @@ const AllItemsDirectory = () => {
   }
 
   return (
-    <div className="table-container">
-      <div className="header">
+    <div className="table-container" style={{marginTop:"2rem"}}>
+      <div className="header" style={{marginBlock:"1rem"}} >
         <div
           style={{
             display: 'flex',

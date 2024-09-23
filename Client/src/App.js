@@ -11,9 +11,10 @@ import DirectoryDetails from "./Component/ItemsDirectory/ItemDetailsDirectory";
 const App = () => {
   return (
     <Router>
-      <div style={{ padding: "20px" }}>
+      <div >
         <Header/>
-        <Routes>
+        <div  style={{padding:"20px"}}>
+            <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route path="/products" element={<ProductList/>} />
           <Route path="/cart" element={<Cart/>} />
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/allItemDirectory" element={<AllItemsDirectory/>}/>
           <Route path="/details/:id" element={<DirectoryDetails />} />
         </Routes>
+        </div>
       </div>
     </Router>
   );
