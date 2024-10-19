@@ -15,7 +15,7 @@ const App = () => {
         <Header/>
         <div  style={{padding:"20px"}}>
             <Routes>
-          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/" element={<ProductList/>} />
           <Route path="/products" element={<ProductList/>} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="/checkout" element={<Checkout/>} />

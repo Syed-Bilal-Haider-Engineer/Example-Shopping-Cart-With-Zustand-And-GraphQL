@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const navigate =useNavigate()
+  const navigate = useNavigate()
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     if (token) {
@@ -21,18 +21,18 @@ function Header() {
             <span className="line line3"></span>
           </div>
           <ul className="menu-items">
-            <li>
+            {/* <li>
               <Link to="/">Login</Link>
-            </li>
+            </li> */}
             <li>
-              <Link to="/products">Products</Link>
+              <Link to="/">Products</Link>
             </li>
             <li>
               <Link to="/cart">Cart</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/allItemDirectory">Item List</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/checkout">Checkout</Link>
             </li>

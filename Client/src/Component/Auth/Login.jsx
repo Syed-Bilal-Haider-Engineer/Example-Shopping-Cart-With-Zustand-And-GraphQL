@@ -25,12 +25,13 @@ function Home() {
       if (token) {
         localStorage.setItem('authToken', token);
         console.log('Token stored in localStorage:', token);
-        navigate('/products')
+        navigate('/')
         
       } else {
         console.log('No token received.');
         alert("User name or Password are invalid!")
       }
+      navigate('/')
     } catch (error) {
       console.error('Mutation error:', error);
     }
