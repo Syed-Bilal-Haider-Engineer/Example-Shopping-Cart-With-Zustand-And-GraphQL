@@ -27,8 +27,10 @@ This is a mini shopping cart project built using React, Zustand for state manage
    ```bash
    git clone https://github.com/Syed-Bilal-Haider/shopping-cart-zustand-graphql.git
    cd shopping-cart-zustand-graphql
-2.** Install dependencies **
+   
+**2.** Install dependencies ****
    npm install
+   
 **3. Run the App**
    npm start
 
